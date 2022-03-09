@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #79a4c8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  color: #013560;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.empty {
+  height: 130px;
+  width: 130px;
+  background: white;
+  margin: 65px;
+}
+
+.castle {
+  height: 130px;
+  width: 130px;
+  cursor: pointer;
+  background: #88d2b8;
+  margin: 0;
+  border: none;
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background-color: #333;
+  border-color: white;
+  border-style: dashed;
+}
+
+.area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  width: 130px;
+  height: 130px;
+}
+
+.bug {
+  background-color: rgb(210, 69, 69);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* GENERAL BUTTON STYLING */
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 0.2em 1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: #2ecc71;
+}
+
+#game-start-btn::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+#game-start-btn:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

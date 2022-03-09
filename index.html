@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Move It!</title>
+</head>
+<body>
+  <h1>
+    Move It!
+  </h1>
+  <h3 class="timer">
+    0 s
+  </h3>
+  <main class="container">
+    <div>
+      <div class="row">
+        <div class="empty" data-position="0">
+          <div class="castle" draggable="true"></div>
+        </div>
+        <div class="empty" data-position="1"></div>
+      </div>
+      <div class="row">
+        <div class="empty" data-position="2"></div>
+        <div class="empty" data-position="3"></div>
+      </div>
+    </div>
+    <div class="area">
+      <div class="bug"></div>
+    </div>
+  </main>
+
+  <button id="game-start-btn">
+    Start!
+  </button>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
